@@ -1,4 +1,5 @@
 import discord
+from discord.ext import commands
 import asyncio
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -6,7 +7,7 @@ import datetime
 import random
 import os
 
-client = discord.Client()
+client = commands.Bot(command_prefix=">>", intents=discord.Intents.all())
 
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
@@ -435,5 +436,3 @@ async def on_message(message):
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
-
-
