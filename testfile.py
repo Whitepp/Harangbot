@@ -368,6 +368,14 @@ async def on_message(message):
             await message.channel.send("하랑봇이 추천드리는 오늘의 맵은....!  **||" + mapresult + "||**")
             return
 
+        if content == "공수추천":
+            choices = "공격 수비"
+            choice = choices.split(" ")
+            number = random.randint(1, len(choice))
+            result = choice[number - 1]
+            await message.channel.send("나는요 " + result + "이 좋은거헐! 오또케!")
+            return
+
         spreadsheet = await get_spreadsheet('responses')
         roles = spreadsheet.col_values(6)
         battletags = spreadsheet.col_values(2)
@@ -436,3 +444,4 @@ async def on_message(message):
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
+
