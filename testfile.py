@@ -369,11 +369,11 @@ async def on_message(message):
             return
 
         if content == "공수추천":
-            choices = "공격 수비"
+            choices = "공격이 수비가"
             choice = choices.split(" ")
             number = random.randint(1, len(choice))
             result = choice[number - 1]
-            await message.channel.send("나는요 " + result + "이 좋은거헐! 오또케!")
+            await message.channel.send("나는요 " + result + " 좋은거헐! (짝짝) 오또케!")
             return
 
         spreadsheet = await get_spreadsheet('responses')
