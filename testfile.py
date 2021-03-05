@@ -6,6 +6,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import datetime
 import random
 import os
+from discord.utils import get
 
 client = commands.Bot(command_prefix=">>", intents=discord.Intents.all())
 
@@ -33,6 +34,44 @@ async def on_ready():
     print(client.user.id)
     print("---------------")
     await client.change_presence(status=discord.Status.online, activity=game)
+
+
+@client.event
+async def on_member_join(member):
+    role = get(member.guild.roles, name="신입클랜원")
+
+    embed = discord.Embed(title="하랑에 오신 것을 환영합니다!", description="하랑에 대해 간단히 설명해드릴게요!", color=12745742)
+    embed.add_field(name="필독 링크", value="네이버 카페 링크 : https://cafe.naver.com/owgreen \n "
+                                        "필독 공지 : https://cafe.naver.com/owgreen/9995 \n "
+                                        "하랑봇 사용법 : https://cafe.naver.com/owgreen/9547", inline=False)
+    embed.add_field(name="Q1. 별명은 어떻게 바꾸나요?",
+                    value="디스코드 기준 왼쪽에 하랑서버에서 우클릭 > 별명 변경하기 > (나이/포지션)닉네임#배틀태그", inline=False)
+    embed.add_field(name="Q2. 별명 변경시 저는 Flex인데 Flex로 별명 변경 가능한가요?",
+                    value="아니요. 하랑에 지원하실 때 적은 대표 포지션으로만 변경 가능합니다. "
+                          "포지션을 추가하고 싶으시면 정식 클랜원이 되신 이후 테스트내전을 통해 포지션을 획득할 수 있습니다.",
+                    inline=False)
+    embed.add_field(name="Q3. 큐는 어떻게 들어가면 되나요?",
+                    value="각 큐의 남는 포지션을 보고 들어가시면 됩니다. 잘모르겠다면 직접 음성방에 들어가서 물어보시거나 "
+                          "디코의 #대화공간에서 9번방 탱커자리 있나요? 이런식으로 물어보시면 친절하게 답해주실거에요",
+                    inline=False)
+    embed.add_field(name="Q4. 솔로로 돌리고 싶습니다 그럼 디코는 사용하지 않아도 되나요?",
+                    value="솔큐로 플레이 하실 때에는 디스코드의 솔큐방에 들어가신 후 플레이 부탁드립니다. "
+                          "또, 지인과 플레이 하거나 타 디코를 사용할 때에는 디스코드 #대화공간에 언급해 주신 후 플레이 부탁드립니다.",
+                    inline=False)
+    embed.add_field(name="Q5. 연습방이란 무엇인가요?",
+                    value="본인 포지션이 아닌 타포지션을 연습하기 위한 방입니다. "
+                          "연습방에서는 포지션의 제한 없이 모든 포지션을 플레이 하실 수 있습니다.",
+                    inline=False)
+    embed.add_field(name="Q6. 운영진 친구추가를 해야한다던데... 한번에 배틀태그를 볼 수 있을까요?",
+                    value="하랑봇을 사용해서 보실 수 있습니다 디스코드 #대화공간에서 >>운영진 이라고 타이핑하시면 "
+                          "모든 운영진과 스탭의 배틀태그를 확인하실 수 있습니다. 친구추가를 꼭 하셔야 정규 클랜원으로 합격하실 수 있습니다.",
+                    inline=False)
+    embed.add_field(name="Q7. 수다방에서 나갔는데 다시 들어가려면 링크가 필요해요!",
+                    value="하랑봇을 사용해서 보실 수 있습니다 디스코드 #대화공간에서 >>수다방 이라고 타이핑하시면 "
+                          "오픈카톡방 링크를 확인하실 수 있습니다. 하랑봇는 여러 기능이 많으니 위에 첨부한 하랑봇 가이드 링크를 참고해주세요.",
+                    inline=False)
+    await member.send(embed=embed)
+    await member.add_roles(role)
 
 
 async def get_spreadsheet(ws_name):
@@ -439,6 +478,8 @@ async def on_message(message):
             embed.set_thumbnail(url=thumbnaillink)
 
         await channel.send(embed=embed)
+
+
 
 
 
