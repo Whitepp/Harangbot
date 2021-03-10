@@ -415,6 +415,32 @@ async def on_message(message):
             await message.channel.send("나는요 " + result + " 좋은거헐! (짝짝) 오또케!")
             return
 
+        if content == "하랑대회일정":
+            embed = discord.Embed(title="하랑대회 시즌13 대회 일정입니다.", description="1등을 향해 고다고!", color=1752220)
+            embed.add_field(name="1 싸이클",
+                            value="3월 17일 수요일 :: 3팀 vs 4팀\n3월 18일 목요일 :: 1팀 vs 2팀\n3월 19일 금요일 :: 2팀 vs 4팀\n"
+                                  "3월 20일 토요일 :: 1팀 vs 3팀\n3월 21일 일요일 :: 2팀 vs 3팀\n3월 22일 월요일 :: 2팀 vs 3팀", inline=False)
+            embed.add_field(name="2 싸이클",
+                            value="3월 25일 목요일 :: 1팀 vs 3팀\n3월 26일 금요일 :: 2팀 vs 4팀\n3월 27일 토요일 :: 3팀 vs 4팀\n"
+                                  "3월 28일 일요일 :: 1팀 vs 2팀\n3월 29일 월요일 :: 2팀 vs 3팀\n3월 30일 화요일 :: 1팀 vs 4팀", inline=False)
+            embed.add_field(name="준결승", value="4월 1일 목요일 :: 예선 2위 vs 예선 3위", inline=False)
+            embed.add_field(name="결승", value="4월 3일 토요일 :: 준결승 우승팀 vs 예선 1위", inline=False)
+            await message.channel.send(embed=embed)
+            return
+
+        if content == "하랑대회팀":
+            embed = discord.Embed(title="하랑대회 시즌13 팀편성 결과입니다.", description="어느팀이 우승할까요?", color=1752220)
+            embed.add_field(name="1팀 팀명",
+                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+            embed.add_field(name="2팀 팀명",
+                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+            embed.add_field(name="3팀 팀명",
+                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+            embed.add_field(name="4팀 팀명",
+                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+            await message.channel.send(embed=embed)
+            return
+
         spreadsheet = await get_spreadsheet('responses')
         roles = spreadsheet.col_values(6)
         battletags = spreadsheet.col_values(2)
@@ -478,9 +504,6 @@ async def on_message(message):
             embed.set_thumbnail(url=thumbnaillink)
 
         await channel.send(embed=embed)
-
-
-
 
 
 access_token = os.environ["BOT_TOKEN"]
