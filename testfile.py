@@ -431,13 +431,13 @@ async def on_message(message):
         if content == "하랑대회팀":
             embed = discord.Embed(title="하랑대회 시즌13 팀편성 결과입니다.", description="어느팀이 우승할까요?", color=1752220)
             embed.add_field(name="1팀 팀명",
-                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+                            value="슈프림, nas, recluse, byul, 데헷, milkyclaris, starry, 구멍난홍시, 디디, 제망메가, Muse", inline=False)
             embed.add_field(name="2팀 팀명",
-                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+                            value="꽃성학, ayirkrap, claris, 정호승, TapHangl, 꾸르볼볼, silnaegarden, 별수호자이수근, Nemesis, kiho, 꿈속에, 옌이", inline=False)
             embed.add_field(name="3팀 팀명",
-                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+                            value="비상, Bewhy, 큰지, 디도, creative, 므앵, 아사히서우, javastorm, 조완득, 꼰도르, 엑샤", inline=False)
             embed.add_field(name="4팀 팀명",
-                            value="팀원1, 팀원2, 팀원3, 팀원4, 팀원5, 팀원6, 팀원7, 팀원8, 팀원9", inline=False)
+                            value="경규핵, jaynaught, 오상민, 박종현, noob, 민우쌤의쿵쾅교실, oscharang, whyalwaysus, 꼬북2, 케이, 나만바라봐줘", inline=False)
             await message.channel.send(embed=embed)
             return
 
@@ -504,6 +504,7 @@ async def on_message(message):
             embed.set_thumbnail(url=thumbnaillink)
 
         await channel.send(embed=embed)
+
 
 
 access_token = os.environ["BOT_TOKEN"]
