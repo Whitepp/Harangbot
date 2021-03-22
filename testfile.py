@@ -419,7 +419,7 @@ async def on_message(message):
             embed = discord.Embed(title="하랑대회 시즌13 대회 일정입니다.", description="1등을 향해 고다고!", color=1752220)
             embed.add_field(name="1 싸이클",
                             value="~~3월 17일 수요일 :: 3팀 vs 4팀 (3:0)~~\n~~3월 18일 목요일 :: 1팀 vs 2팀 (2:1)~~\n~~3월 19일 금요일 :: 2팀 vs 4팀 (3:0)~~\n"
-                                  "~~3월 20일 토요일 :: 1팀 vs 3팀 (1:2)~~\n~~3월 21일 일요일 :: 2팀 vs 3팀 (0:3)~~\n3월 22일 월요일 :: 1팀 vs 4팀", inline=False)
+                                  "~~3월 20일 토요일 :: 1팀 vs 3팀 (1:2)~~\n~~3월 21일 일요일 :: 2팀 vs 3팀 (0:3)~~\n~~3월 22일 월요일 :: 1팀 vs 4팀 (2:1)~~", inline=False)
             embed.add_field(name="2 싸이클",
                             value="3월 25일 목요일 :: 1팀 vs 3팀\n3월 26일 금요일 :: 2팀 vs 4팀\n3월 27일 토요일 :: 3팀 vs 4팀\n"
                                   "3월 28일 일요일 :: 1팀 vs 2팀\n3월 29일 월요일 :: 2팀 vs 3팀\n3월 30일 화요일 :: 1팀 vs 4팀", inline=False)
