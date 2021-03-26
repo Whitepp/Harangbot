@@ -425,7 +425,7 @@ async def on_message(message):
                                   "3월 28일 일요일 :: 1팀 vs 2팀\n3월 29일 월요일 :: 2팀 vs 3팀\n3월 30일 화요일 :: 1팀 vs 4팀", inline=False)
             embed.add_field(name="준결승", value="4월 1일 목요일 :: 예선 2위 vs 예선 3위", inline=False)
             embed.add_field(name="결승", value="4월 3일 토요일 :: 준결승 우승팀 vs 예선 1위", inline=False)
-            embed.add_field(name="점수판", value="1팀 : 3\n2팀 : 0.2\n3팀 : 8.75\n4팀 : -1", inline=False)
+            embed.add_field(name="점수판", value="1팀 : 3\n2팀 : 0.5\n3팀 : 8.75\n4팀 : -1", inline=False)
             await message.channel.send(embed=embed)
             return
 
