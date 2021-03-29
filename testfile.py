@@ -422,10 +422,10 @@ async def on_message(message):
                                   "~~3월 20일 토요일 :: 1팀 vs 3팀 (1:2)~~\n~~3월 21일 일요일 :: 2팀 vs 3팀 (0:3)~~\n~~3월 22일 월요일 :: 1팀 vs 4팀 (2:1)~~", inline=False)
             embed.add_field(name="2 싸이클",
                             value="~~3월 25일 목요일 :: 1팀 vs 3팀 (1:2)~~\n~~3월 26일 금요일 :: 2팀 vs 4팀 (0:2/무승부:1)~~\n~~3월 27일 토요일 :: 3팀 vs 4팀 (3:0)~~\n"
-                                  "~~3월 28일 일요일 :: 1팀 vs 2팀 (0:3)~~\n3월 29일 월요일 :: 2팀 vs 3팀\n3월 30일 화요일 :: 1팀 vs 4팀", inline=False)
+                                  "~~3월 28일 일요일 :: 1팀 vs 2팀 (0:3)~~\n3월 29일 월요일 :: 2팀 vs 3팀 (2:1)~~\n3월 30일 화요일 :: 1팀 vs 4팀", inline=False)
             embed.add_field(name="준결승", value="4월 1일 목요일 :: 예선 2위 vs 예선 3위", inline=False)
             embed.add_field(name="결승", value="4월 3일 토요일 :: 준결승 우승팀 vs 예선 1위", inline=False)
-            embed.add_field(name="점수판", value="1팀 : 1.5\n2팀 : 3.5\n3팀 : 11.75\n4팀 : -2.5", inline=False)
+            embed.add_field(name="점수판", value="1팀 : 1.5\n2팀 : 5\n3팀 : 11.75\n4팀 : -2.5", inline=False)
             await message.channel.send(embed=embed)
             return
 
