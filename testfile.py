@@ -416,16 +416,8 @@ async def on_message(message):
             return
 
         if content == "하랑대회일정":
-            embed = discord.Embed(title="하랑대회 시즌13 대회 일정입니다.", description="1등을 향해 고다고!", color=1752220)
-            embed.add_field(name="1 싸이클",
-                            value="~~3월 17일 수요일 :: 3팀 vs 4팀 (3:0)~~\n~~3월 18일 목요일 :: 1팀 vs 2팀 (2:1)~~\n~~3월 19일 금요일 :: 2팀 vs 4팀 (3:0)~~\n"
-                                  "~~3월 20일 토요일 :: 1팀 vs 3팀 (1:2)~~\n~~3월 21일 일요일 :: 2팀 vs 3팀 (0:3)~~\n~~3월 22일 월요일 :: 1팀 vs 4팀 (2:1)~~", inline=False)
-            embed.add_field(name="2 싸이클",
-                            value="~~3월 25일 목요일 :: 1팀 vs 3팀 (1:2)~~\n~~3월 26일 금요일 :: 2팀 vs 4팀 (0:2/무승부:1)~~\n~~3월 27일 토요일 :: 3팀 vs 4팀 (3:0)~~\n"
-                                  "~~3월 28일 일요일 :: 1팀 vs 2팀 (0:3)~~\n~~3월 29일 월요일 :: 2팀 vs 3팀 (2:1)~~\n~~3월 30일 화요일 :: 1팀 vs 4팀 (2:1)~~", inline=False)
-            embed.add_field(name="준결승", value="4월 1일 목요일 :: 2팀 vs 1팀", inline=False)
-            embed.add_field(name="결승", value="4월 3일 토요일 :: 준결승 우승팀 vs 3팀", inline=False)
-            embed.add_field(name="점수판", value="1팀 : 3\n2팀 : 5\n3팀 : 11.75\n4팀 : -2.5", inline=False)
+            embed = discord.Embed(title="하랑대회 시즌13 대회 모두 수고하셨습니다.", description="다음 리그는 언제?!", color=1752220)
+            embed.add_field(name="우승은!! 3팀 빝상대책위원회!!!!!", value="", inline=False)
             await message.channel.send(embed=embed)
             return
 
