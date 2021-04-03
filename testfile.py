@@ -417,7 +417,7 @@ async def on_message(message):
 
         if content == "하랑대회일정":
             embed = discord.Embed(title="하랑대회 시즌13 대회 모두 수고하셨습니다.", description="다음 리그는 언제?!", color=1752220)
-            embed.add_field(name="우승은!! 3팀 빝상대책위원회!!!!!", value="", inline=False)
+            embed.add_field(name="우승은!! 3팀 빝상대책위원회!!!!!", value="축하합니다!", inline=False)
             await message.channel.send(embed=embed)
             return
 
