@@ -430,12 +430,12 @@ async def on_message(message):
                     team2List.append(content.split(" ")[idx])
 
             embed = discord.Embed(title="오늘의 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
-            embed.add_field(name="1팀", inline=False)
+            embed.add_field(name="1팀", value='', inline=False)
             embed.add_field(name="탱커", value=team1List[0]+"\n"+team1List[1], inline=True)
             embed.add_field(name="딜러", value=team1List[2]+"\n"+team1List[3], inline=True)
             embed.add_field(name="힐러", value=team1List[4]+"\n"+team1List[5], inline=True)
 
-            embed.add_field(name="2팀", inline=False)
+            embed.add_field(name="2팀", value='', inline=False)
             embed.add_field(name="탱커", value=team2List[0]+"\n"+team2List[1], inline=True)
             embed.add_field(name="딜러", value=team2List[2]+"\n"+team2List[3], inline=True)
             embed.add_field(name="힐러", value=team2List[4]+"\n"+team2List[5], inline=True)
