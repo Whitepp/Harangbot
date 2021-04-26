@@ -419,8 +419,9 @@ async def on_message(message):
         if content.startswith("내전팀편성"):
             team1List = []
             team2List = []
-            for idx in range(1, 12):
-                if content.split(" ")[idx] == None:
+            print(content.split(" "))
+            for idx in range(1, 13):
+                if len(content.split(" ")) != 13:
                     data = "잘못 입력한 부분이 있습니다. 다시 입력해주세요."
                     await channel.send(data)
                     return
@@ -428,14 +429,16 @@ async def on_message(message):
                     team1List.append(content.split(" ")[idx])
                 else:
                     team2List.append(content.split(" ")[idx])
+            print(team1List)
+            print(team2List)
 
-            embed = discord.Embed(title="오늘의 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
-            embed.add_field(name="1팀", value='', inline=False)
+            embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
+            embed.add_field(name="1팀", value='1팀 로스터', inline=False)
             embed.add_field(name="탱커", value=team1List[0]+"\n"+team1List[1], inline=True)
             embed.add_field(name="딜러", value=team1List[2]+"\n"+team1List[3], inline=True)
             embed.add_field(name="힐러", value=team1List[4]+"\n"+team1List[5], inline=True)
 
-            embed.add_field(name="2팀", value='', inline=False)
+            embed.add_field(name="2팀", value='2팀 로스터', inline=False)
             embed.add_field(name="탱커", value=team2List[0]+"\n"+team2List[1], inline=True)
             embed.add_field(name="딜러", value=team2List[2]+"\n"+team2List[3], inline=True)
             embed.add_field(name="힐러", value=team2List[4]+"\n"+team2List[5], inline=True)
@@ -509,5 +512,5 @@ async def on_message(message):
 
 
 access_token = os.environ["BOT_TOKEN"]
-client.run(access_token)
+client.run(acces_token)
 
