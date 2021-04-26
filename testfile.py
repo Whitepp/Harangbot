@@ -419,31 +419,36 @@ async def on_message(message):
         if content.startswith("내전팀편성"):
             team1List = []
             team2List = []
-            print(content.split(" "))
-            for idx in range(1, 13):
-                if len(content.split(" ")) != 13:
+
+            if len(content.split(" ")) != 13 and len(content.split(" ")) != 15:
                     data = "잘못 입력한 부분이 있습니다. 다시 입력해주세요."
                     await channel.send(data)
                     return
-                if idx < 7:
-                    team1List.append(content.split(" ")[idx])
-                else:
-                    team2List.append(content.split(" ")[idx])
-            print(team1List)
-            print(team2List)
+            if len(content.split(" ")) == 13:
+                for idx in range(1, 13):
+                    if idx < 7:
+                        team1List.append(content.split(" ")[idx])
+                    else:
+                        team2List.append(content.split(" ")[idx])
 
-            embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
-            embed.add_field(name="1팀", value='1팀 로스터', inline=False)
-            embed.add_field(name="탱커", value=team1List[0]+"\n"+team1List[1], inline=True)
-            embed.add_field(name="딜러", value=team1List[2]+"\n"+team1List[3], inline=True)
-            embed.add_field(name="힐러", value=team1List[4]+"\n"+team1List[5], inline=True)
+                embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
+                embed.add_field(name="1팀", value="[탱커] "+team1List[0]+"\t"+team1List[1]+"\n[딜러] "+team1List[2]+"\t"+team1List[3]+"\n[힐러] "+team1List[4]+"\t"+team1List[5], inline=False)
+                embed.add_field(name="2팀", value="[탱커] "+team2List[0]+"\t"+team2List[1]+"\n[딜러] "+team2List[2]+"\t"+team2List[3]+"\n[힐러] "+team2List[4]+"\t"+team2List[5], inline=False)
+                await channel.send(embed=embed)
+                return
 
-            embed.add_field(name="2팀", value='2팀 로스터', inline=False)
-            embed.add_field(name="탱커", value=team2List[0]+"\n"+team2List[1], inline=True)
-            embed.add_field(name="딜러", value=team2List[2]+"\n"+team2List[3], inline=True)
-            embed.add_field(name="힐러", value=team2List[4]+"\n"+team2List[5], inline=True)
-            await channel.send(embed=embed)
-            return
+            if len(content.split(" ")) == 15:
+                for idx in range(3, 15):
+                    if idx < 9:
+                        team1List.append(content.split(" ")[idx])
+                    else:
+                        team2List.append(content.split(" ")[idx])
+
+                embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
+                embed.add_field(name=content.split(" ")[1], value="[탱커] "+team1List[0]+"\t"+team1List[1]+"\n[딜러] "+team1List[2]+"\t"+team1List[3]+"\n[힐러] "+team1List[4]+"\t"+team1List[5], inline=False)
+                embed.add_field(name=content.split(" ")[2], value="[탱커] "+team2List[0]+"\t"+team2List[1]+"\n[딜러] "+team2List[2]+"\t"+team2List[3]+"\n[힐러] "+team2List[4]+"\t"+team2List[5], inline=False)
+                await channel.send(embed=embed)
+                return
 
         spreadsheet = await get_spreadsheet('responses')
         roles = spreadsheet.col_values(6)
