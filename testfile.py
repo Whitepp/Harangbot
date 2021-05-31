@@ -44,6 +44,8 @@ async def on_member_join(member):
     embed.add_field(name="필독 링크", value="네이버 카페 링크 : https://cafe.naver.com/owgreen \n "
                                         "필독 공지 : https://cafe.naver.com/owgreen/9995 \n "
                                         "하랑봇 사용법 : https://cafe.naver.com/owgreen/9547", inline=False)
+    embed.add_field(name="Q0. 운영진 및 스텝 친추를 꼭! 해야한다던데.. 누가 운영진이고 스텝이죠?",
+                    value="디스코드 대화공간 채널에서 >>운영진  이라고 쳐보시면 운영진 및 스텝 명단을 볼 수 있습니다. 꼭 친추 하셔야해요!", inline=False)
     embed.add_field(name="Q1. 별명은 어떻게 바꾸나요?",
                     value="디스코드 기준 왼쪽에 하랑서버에서 우클릭 > 별명 변경하기 > (나이/포지션)닉네임#배틀태그", inline=False)
     embed.add_field(name="Q2. 별명 변경시 저는 Flex인데 Flex로 별명 변경 가능한가요?",
