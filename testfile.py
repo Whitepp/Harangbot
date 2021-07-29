@@ -349,7 +349,7 @@ async def on_message(message):
 
         if content == "문의방":
             # await message.channel.send("https://open.kakao.com/o/g233VUcb")
-            embed = discord.Embed(title="문의방", description="문의방을 두려워하지 말라! \n https://open.kakao.com/o/g233VUcb",
+            embed = discord.Embed(title="문의방", description="문의방을 두려워하지 말라! \n https://open.kakao.com/o/gQIfr9pd",
                                   color=0xE86222)
             await channel.send(embed=embed)
             return
