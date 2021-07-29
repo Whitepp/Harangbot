@@ -44,6 +44,8 @@ async def on_member_join(member):
     embed.add_field(name="필독 링크", value="네이버 카페 링크 : https://cafe.naver.com/owgreen \n "
                                         "필독 공지 : https://cafe.naver.com/owgreen/9995 \n "
                                         "하랑봇 사용법 : https://cafe.naver.com/owgreen/9547", inline=False)
+    embed.add_field(name="Q0. 운영진 및 스텝 친추를 꼭! 해야한다던데.. 누가 운영진이고 스텝이죠?",
+                    value="디스코드 대화공간 채널에서 >>운영진  이라고 쳐보시면 운영진 및 스텝 명단을 볼 수 있습니다. 꼭 친추 하셔야해요!", inline=False)
     embed.add_field(name="Q1. 별명은 어떻게 바꾸나요?",
                     value="디스코드 기준 왼쪽에 하랑서버에서 우클릭 > 별명 변경하기 > (나이/포지션)닉네임#배틀태그", inline=False)
     embed.add_field(name="Q2. 별명 변경시 저는 Flex인데 Flex로 별명 변경 가능한가요?",
@@ -62,11 +64,7 @@ async def on_member_join(member):
                     value="본인 포지션이 아닌 타포지션을 연습하기 위한 방입니다. "
                           "연습방에서는 포지션의 제한 없이 모든 포지션을 플레이 하실 수 있습니다.",
                     inline=False)
-    embed.add_field(name="Q6. 운영진 친구추가를 해야한다던데... 한번에 배틀태그를 볼 수 있을까요?",
-                    value="하랑봇을 사용해서 보실 수 있습니다 디스코드 #대화공간에서 >>운영진 이라고 타이핑하시면 "
-                          "모든 운영진과 스탭의 배틀태그를 확인하실 수 있습니다. 친구추가를 꼭 하셔야 정규 클랜원으로 합격하실 수 있습니다.",
-                    inline=False)
-    embed.add_field(name="Q7. 수다방에서 나갔는데 다시 들어가려면 링크가 필요해요!",
+    embed.add_field(name="Q6. 수다방에서 나갔는데 다시 들어가려면 링크가 필요해요!",
                     value="하랑봇을 사용해서 보실 수 있습니다 디스코드 #대화공간에서 >>수다방 이라고 타이핑하시면 "
                           "오픈카톡방 링크를 확인하실 수 있습니다. 하랑봇는 여러 기능이 많으니 위에 첨부한 하랑봇 가이드 링크를 참고해주세요.",
                     inline=False)
