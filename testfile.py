@@ -40,7 +40,7 @@ async def on_ready():
 async def on_member_join(member):
     role = get(member.guild.roles, name="신입클랜원")
 
-    embed = discord.Embed(title="하랑에 오신 것을 환영합니다!", description="하랑에 대해 간단히 설명해드릴게요!", color=12745742)
+    embed = discord.Embed(title="하랑에 오신 것을 환영합니다", description="하랑에 대해 간단히 설명해드릴게요!", color=12745742)
     embed.add_field(name="필독 링크", value="네이버 카페 링크 : https://cafe.naver.com/owgreen \n "
                                         "필독 공지 : https://cafe.naver.com/owgreen/9995 \n "
                                         "하랑봇 사용법 : https://cafe.naver.com/owgreen/9547", inline=False)
