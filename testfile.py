@@ -329,7 +329,7 @@ async def on_message(message):
             return
 
         if content == "명령어":
-            embed = discord.Embed(title="명령어 모음", description="하랑봇 문의사항은 바티도, 므앵에게 전달해주세요", color=12745742)
+            embed = discord.Embed(title="명령어 모음", description="하랑봇 문의사항은 꾸르볼볼에게 전달해주세요", color=12745742)
             embed.add_field(name="LINK for Everything", value="문의방, 수다방, 공지방, 하랑카페, 신입안내", inline=False)
             embed.add_field(name="운영진 및 스탭 목록", value="운영진", inline=False)
             embed.add_field(name="스크림", value="스크림개최 HH:MM 제한인원 설명, 스크림종료, 스크림신청, 스크림신청취소,\n스크림, 시간변경 HH:MM, 개최자변경 @멘션, 제한인원변경 N", inline=False)
@@ -367,7 +367,7 @@ async def on_message(message):
         if content == "신입안내":
             embed = discord.Embed(title="신입클랜원 안내 링크", description= "신입클랜원분들은 해당 사항 한 번씩 읽어주세요!!", color=0xFF5733)
             embed.add_field(name="디스코드 안내 링크", value="https://cafe.naver.com/owgreen/10272", inline=False)
-            embed.add_field(name="하랑 신입클랜원 안내 링크", value="https://cafe.naver.com/owgreen/10273", inline=False)
+            embed.add_field(name="하랑 신입클랜원 안내 링크", value="https://cafe.naver.com/owgreen/10579", inline=False)
             await channel.send(embed=embed)
             return
 
