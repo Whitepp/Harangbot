@@ -28,7 +28,7 @@ def is_dcstaff(member):
 async def on_ready():
     global Harang
     await client.wait_until_ready()
-    game = discord.Game("하랑과 연애")
+    game = discord.Game("신입클랜원 환영")
     print("login: Harang Main")
     print(client.user.name)
     print(client.user.id)
