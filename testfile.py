@@ -432,7 +432,7 @@ async def on_message(message):
                     else:
                         team2List.append(content.split(" ")[idx])
 
-                embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
+                embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 꾸르볼볼에게 전달해주세요", color=0xFF5733)
                 embed.add_field(name="1팀", value="[탱커] "+team1List[0]+"\t"+team1List[1]+"\n[딜러] "+team1List[2]+"\t"+team1List[3]+"\n[힐러] "+team1List[4]+"\t"+team1List[5], inline=False)
                 embed.add_field(name="2팀", value="[탱커] "+team2List[0]+"\t"+team2List[1]+"\n[딜러] "+team2List[2]+"\t"+team2List[3]+"\n[힐러] "+team2List[4]+"\t"+team2List[5], inline=False)
                 await channel.send(embed=embed)
@@ -445,7 +445,7 @@ async def on_message(message):
                     else:
                         team2List.append(content.split(" ")[idx])
 
-                embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 므앵에게 전달해주세요", color=0xFF5733)
+                embed = discord.Embed(title="오늘의 내전 팀편성", description="해당 명령어 문의사항은 꾸르볼볼에게 전달해주세요", color=0xFF5733)
                 embed.add_field(name=content.split(" ")[1], value="[탱커] "+team1List[0]+"\t"+team1List[1]+"\n[딜러] "+team1List[2]+"\t"+team1List[3]+"\n[힐러] "+team1List[4]+"\t"+team1List[5], inline=False)
                 embed.add_field(name=content.split(" ")[2], value="[탱커] "+team2List[0]+"\t"+team2List[1]+"\n[딜러] "+team2List[2]+"\t"+team2List[3]+"\n[힐러] "+team2List[4]+"\t"+team2List[5], inline=False)
                 await channel.send(embed=embed)
