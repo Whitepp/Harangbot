@@ -42,7 +42,7 @@ async def on_member_join(member):
 
     embed = discord.Embed(title="하랑에 오신 것을 환영합니다", description="하랑에 대해 간단히 설명해드릴게요!", color=12745742)
     embed.add_field(name="필독 링크", value="네이버 카페 링크 : https://cafe.naver.com/owgreen \n "
-                                        "필독 공지 : https://cafe.naver.com/owgreen/9995 \n "
+                                        "필독 공지 : https://cafe.naver.com/owgreen/10862 \n "
                                         "하랑봇 사용법 : https://cafe.naver.com/owgreen/9547", inline=False)
     embed.add_field(name="Q0. 운영진 및 스텝 친추를 꼭! 해야한다던데.. 누가 운영진이고 스텝이죠?",
                     value="디스코드 대화공간 채널에서 >>운영진  이라고 쳐보시면 운영진 및 스텝 명단을 볼 수 있습니다. 꼭 친추 하셔야해요!", inline=False)
@@ -367,7 +367,7 @@ async def on_message(message):
         if content == "신입안내":
             embed = discord.Embed(title="신입클랜원 안내 링크", description= "신입클랜원분들은 해당 사항 한 번씩 읽어주세요!!", color=0xFF5733)
             embed.add_field(name="디스코드 안내 링크", value="https://cafe.naver.com/owgreen/10272", inline=False)
-            embed.add_field(name="하랑 신입클랜원 안내 링크", value="https://cafe.naver.com/owgreen/10579", inline=False)
+            embed.add_field(name="하랑 신입클랜원 안내 링크", value="https://cafe.naver.com/owgreen/10861", inline=False)
             await channel.send(embed=embed)
             return
 
