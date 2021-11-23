@@ -370,6 +370,10 @@ async def on_message(message):
             embed.add_field(name="하랑 신입클랜원 안내 링크", value="https://cafe.naver.com/owgreen/10861", inline=False)
             await channel.send(embed=embed)
             return
+         
+        if content == "참여코드":
+            await message.channel.send("수다방/공지방 : 1207")
+            return                  
 
         if content == "한줄소개설문지":
             await message.channel.send("https://forms.gle/BY1NrqinwzGf8wvs9")
