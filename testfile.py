@@ -376,7 +376,7 @@ async def on_message(message):
             return                  
 
         if content == "한줄소개설문지":
-            await message.channel.send("https://forms.gle/dtnkkugrvcT7Q1Pq8")
+            await message.channel.send("https://forms.gle/5B5Zd3GJRmbfGHSU9")
             return
 
         if content == "주사위":
