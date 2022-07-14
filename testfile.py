@@ -322,7 +322,7 @@ async def on_message(message):
             return
 
         if content == "한줄소개":
-            spreadsheet = await get_spreadsheet('responses.')
+            spreadsheet = await get_spreadsheet('responses')
             data = spreadsheet.col_values(3)
             data[0] = "한줄소개 명령어 리스트입니다!"
             await channel.send(data)
