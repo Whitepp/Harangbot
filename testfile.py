@@ -455,7 +455,7 @@ async def on_message(message):
                 await channel.send(embed=embed)
                 return
 
-        spreadsheet = await get_spreadsheet('responses')
+        spreadsheet = await get_spreadsheet('responses1')
         roles = spreadsheet.col_values(6)
         battletags = spreadsheet.col_values(2)
 
