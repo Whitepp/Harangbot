@@ -405,7 +405,7 @@ async def on_message(message):
 
         if content == "맵추천":
             # 파리 호라이즌
-            maps = "네팔 리장타워 부산 오아시스 일리오스 66번국도 감시기지:지브롤터 도라도 리알토 쓰레기촌 하바나 눔바니 블리자드월드 아이헨발데 왕의길 할리우드 파라이수 서킷로얄 뉴퀸스트리트 콜로세오 이스페란사 미드타운"
+            maps = "네팔 리장타워 부산 오아시스 일리오스 66번국도 감시기지:지브롤터 도라도 리알토 쓰레기촌 하바나 눔바니 블리자드월드 아이헨발데 왕의길 할리우드 파라이수 서킷로얄 뉴퀸스트리트 콜로세오 이스페란사 미드타운 비와이잘생김"
             mapchoice = maps.split(" ")
             mapnumber = random.randint(1, len(mapchoice))
             mapresult = mapchoice[mapnumber - 1]
